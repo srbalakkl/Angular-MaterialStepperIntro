@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
   title = 'Angular-MaterialStepperIntro';
 
   registrationForm!: FormGroup;
+  // medium link to learn more
+  // https://dhrubot.medium.com/angular-material-stepper-with-reactive-forms-fa4fe1f9b7cd
 
   ngOnInit(): void {
     this.registrationForm = new FormGroup({
