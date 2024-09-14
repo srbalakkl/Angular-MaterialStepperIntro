@@ -1,0 +1,21 @@
+<p>form-review works!</p>
+<div *ngIf="formSubmitted">
+  <h4>Details Submitted Successfully</h4>
+</div>
+<div *ngIf="!formSubmitted">
+  <h4>Following details submitted, please confirm and hit submit</h4>
+  <br>
+  <div>
+    name: {{ form.get('personalDetails')!.get('firstname')!.value }}
+    Last name: {{ form.get('personalDetails')!.get('lastname')!.value }}
+  </div>
+  <div>
+    Email: {{ form.get('contactDetails')!.get('email')!.value }}
+  </div>
+  <div>
+    Phone : {{ form.get('contactDetails')!.get('phone')!.value }}
+  </div>
+  <button matStepperPrevious type="button">Back</button>
+  &nbsp;
+  <button (click)="submit()" type="button">Submit</button>
+</div>

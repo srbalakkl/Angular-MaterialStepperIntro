@@ -1,0 +1,17 @@
+<p>personal-details works!</p>
+<div [formGroup]="form" id="personal-details">
+  <div formGroupName="personalDetails">
+    <label>FirstName*</label>
+    <input formControlName="firstname" type="text">
+  </div>
+  <div formGroupName="personalDetails">
+    <label>MI*</label>
+    <input formControlName="mi" type="text">
+  </div>
+  <div formGroupName="personalDetails">
+    <label>lastname*</label>
+    <input formControlName="lastname" type="text">
+  </div>
+</div>
+<br>
+<button (click)="step1Submitted()" matStepperNext type="button">Next</button>

@@ -1,0 +1,15 @@
+<p>contact-details works!</p>
+<div [formGroup]="form" id="contact-details">
+  <div formGroupName="contactDetails">
+    <label>Email*</label>
+    <input formControlName="email" type="text">
+  </div>
+  <div formGroupName="contactDetails">
+    <label>Phone*</label>
+    <input formControlName="phone" type="text">
+  </div>
+</div>
+<br>
+<button matStepperPrevious type="button">Back</button>
+&nbsp;
+<button (click)="step2Submitted()" matStepperNext type="button">Next</button>

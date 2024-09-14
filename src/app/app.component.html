@@ -1,0 +1,28 @@
+<div style="text-align: center">
+  <h1>Welcome to {{ title }}</h1>
+</div>
+
+<div>
+  <form [formGroup]="registrationForm" id="form">
+    <mat-horizontal-stepper #stepper>
+      <mat-step [stepControl]="registrationForm.get('personalDetails')!" formGroupName="personalDetails">
+        <ng-template matStepLabel>
+          Enter Personal Details
+        </ng-template>
+        <app-personal-details [form]="registrationForm"></app-personal-details>
+      </mat-step>
+      <mat-step [stepControl]="registrationForm.get('contactDetails')!" formGroupName="contactDetails">
+        <ng-template matStepLabel>
+          Enter Contact Details
+        </ng-template>
+        <app-contact-details [form]="registrationForm"></app-contact-details>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>
+          Confirm Details
+        </ng-template>
+        <app-form-review [form]="registrationForm!"></app-form-review>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </form>
+</div>
